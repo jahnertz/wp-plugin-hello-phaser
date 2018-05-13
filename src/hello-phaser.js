@@ -1,3 +1,4 @@
+// TODO: make this an object so it can be instanced.
 
 var config = {
 	// type: Phaser.AUTO,

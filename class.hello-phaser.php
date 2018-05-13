@@ -10,6 +10,7 @@
 		isset( self::$debug_messages ) ?: ( $debug_messages = array() );
 		isset( $options[ 'initiated' ] ) ?: ( $this->initiate() );
 		add_action( 'wp_enqueue_scripts', array( get_called_class(), 'register_user_scripts' ) );
+		// TODO: move this out of init method.
 		function hello_phaser_shortcode_func ( $atts ) {
 			Hello_Phaser::$instances++; // increment instance number
 			wp_enqueue_script( 'phaser' );
