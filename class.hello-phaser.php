@@ -11,7 +11,6 @@
 	}
 
 	public function initiate () {
-		// TODO: initiate the object.
 		$options = get_option( HELLO_PHASER__OPTIONS );
 		$options[ 'initiated' ] = true;
 		update_option( HELLO_PHASER__OPTIONS, $options );
