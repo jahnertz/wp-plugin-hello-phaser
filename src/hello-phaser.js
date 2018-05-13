@@ -1,7 +1,9 @@
+
 var config = {
-	type: Phaser.AUTO,
+	// type: Phaser.AUTO,
 	width: 800,
 	height: 600,
+	parent: 'hello-phaser-container',
 	physics: {
 		default: 'arcade',
 		arcade: {
@@ -26,6 +28,7 @@ function preload () {
 }
 
 function create () {
+	console.log( 'starting phaser game' );
 	this.add.image( 400, 300, 'sky' );
 	var particles  = this.add.particles( 'particle' );
 	var emitter = particles.createEmitter ( {
