@@ -19,7 +19,7 @@
 
 	public static function enqueue_user_scripts () {
 			wp_register_script( 'phaser', HELLO_PHASER__PLUGIN_URL . 'node_modules/phaser/dist/phaser.min.js', array(), false );
-			wp_register_script( 'hello-phaser', HELLO_PHASER__PLUGIN_URL . 'js/hello-phaser.js', array( 'phaser' ), false );
+			wp_register_script( 'hello-phaser', HELLO_PHASER__PLUGIN_URL . 'src/hello-phaser.js', array( 'phaser' ), false );
 			wp_enqueue_script( 'phaser' );
 			wp_enqueue_script( 'hello-phaser' );
 	}
