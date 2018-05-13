@@ -1,13 +1,13 @@
 <?php
 /**
  * @package hello-phaser
- * @version 1.0.0
+ * @version 1.0.1
 /*
 Plugin Name: hello-phaser
 Plugin URI: https://github.com/jahnertz/wp-plugin-hello-phaser 
 Description: A simple implementation of the Phaser game library in a Wordpress plugin.
 Author: Jordan Han
-Version: 1.0.0
+Version: 1.0.1
 Author URI: https://jhanrahan.com.au
 */
 
