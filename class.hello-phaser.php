@@ -2,6 +2,7 @@
  class Hello_Phaser {
 
 	private static $debug_messages;
+	public static $instances = 0;
 
 	public function init () {
 		// TODO: include Phaser library
@@ -10,10 +11,13 @@
 		isset( $options[ 'initiated' ] ) ?: ( $this->initiate() );
 		add_action( 'wp_enqueue_scripts', array( get_called_class(), 'register_user_scripts' ) );
 		function hello_phaser_shortcode_func ( $atts ) {
+			Hello_Phaser::$instances++; // increment instance number
 			wp_enqueue_script( 'phaser' );
+			$container_id = 'hello-phaser-container-' . Hello_Phaser::$instances;
+			wp_localize_script( 'hello-phaser', 'localized', array( 'parent_id' => $container_id ) );
 			wp_enqueue_script( 'hello-phaser' );
-			$script = '<div id="hello-phaser-container"></div>';
-			return $script;
+			$container = '<div id="' . $container_id . '"></div>';
+			return $container;
 		}
 		add_shortcode( 'hello-phaser', 'hello_phaser_shortcode_func' );
 	}
