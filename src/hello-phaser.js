@@ -17,7 +17,8 @@ var config = {
 var game = new Phaser.Game( config );
 
 function preload () {
-	// this needs to be pulled from wp_options:
+	// TODO: this variable should be set with php:
+	// this.load.setBaseURL( HELLO_PHASER__SRC_URL );
 	this.load.setBaseURL( 'http://dev.unknwn.asia/wp-content/plugins/wp-plugin-hello-phaser/src/' );
 	this.load.image( 'sky', 'assets/skies/wtf.png' );
 	this.load.image( 'logo', 'assets/sprites/phaser3-logo.png' );
