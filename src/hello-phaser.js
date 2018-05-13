@@ -28,7 +28,6 @@ function preload () {
 }
 
 function create () {
-	console.log( 'starting phaser game' );
 	this.add.image( 400, 300, 'sky' );
 	var particles  = this.add.particles( 'particle' );
 	var emitter = particles.createEmitter ( {
